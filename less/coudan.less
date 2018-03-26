@@ -1,0 +1,168 @@
+@import './base.less';
+
+
+
+
+#main {
+    box-sizing: border-box; 
+
+    .product-nav {
+        background-color: #fff;
+        >ul {
+            box-sizing: border-box;
+            margin: 0;
+            position: relative;
+            border-bottom: 1px solid #ccc;
+            z-index: 33;
+            >li {
+                box-sizing: border-box;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 15px;
+                position: relative;
+                a{
+                    color: #5a5a5a;
+                    font-size: 16px;
+                    i {
+                        margin-left: 4px;
+                    }
+                }
+                
+            }
+            /*category 容器*/ 
+            .container {
+                position: absolute;
+                top: 41px;
+                left: 0;
+                z-index: 22;
+                width: 100%;
+                height: 100px;
+                padding: 0;
+                /*第三方商家*/ 
+                .mall-cate {
+                    display: none;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    li {
+                        background-color: #fff;
+                        height: 40px;
+                        line-height: 40px;
+                        padding: 0 10px;
+                        border-bottom: 1px solid #ccc;
+                        >a {
+                            display: block;
+                            height: 100%;
+                            color: #333333;
+                            .glyphicon-ok {
+                                line-height: 40px;
+                                color: #ff841d;
+                            }
+                        }
+                    }
+                }
+                /*一元区*/ 
+                .oneprice-cate-cate {
+                    // display: none;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    li {
+                        background-color: #fff;
+                        height: 40px;
+                        line-height: 40px;
+                        padding: 0 10px;
+                        border-bottom: 1px solid #ccc;
+                        >a {
+                            display: block;
+                            height: 100%;
+                            color: #333333;
+                            .glyphicon-ok {
+                                line-height: 40px;
+                                color: #ff841d;
+                            }
+                        }
+                    }
+                }
+            }
+            /*搜索分类按钮*/ 
+            .btn-search {
+                position: absolute;
+                right: 8px;
+                top: 0px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                width: 40px;
+                font-size: 24px;
+                border-left: 1px solid #ccc;
+                color: #616161;
+            }
+        }
+    }
+    
+    .product-list {
+        // 每个商品的容器
+        width: 100%;
+        margin: 0;
+        padding: 8px;
+        >li {
+            box-sizing: border-box;
+            line-height: 18px;
+            height: 246px;
+            overflow: hidden;
+            padding: 4px;
+            a {
+                display: block;
+                background-color: #fff;
+                width: 100%;
+                height: 100%;
+                .img {
+                    padding: 10px 0;
+                    text-align: center;
+                    >img {
+                        width: 140px;
+                        height: 140px;
+                    }
+                }
+
+                .title {
+                    height: 36px;
+                    line-height: 18px;
+                    font-size: 14px;
+                    overflow: hidden;
+                    padding: 0px 8px;
+                    color: #333333;
+                    font-weight: bold;
+                }
+
+                .price {
+                    padding: 6px 8px;
+                    color: #ff841d;
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+            }
+        }   
+    }
+}
+
+#footer {
+    .nav-menu {
+        height: 30px;
+        line-height: 30px;
+        padding-left: 8px;
+        margin: 20px 0;
+        background-color: #ebebeb;
+        border-top: solid 1px #ebebeb;
+        border-bottom: 1px solid #ccc;
+        
+        >a {
+            color: #333333;
+        }
+    }
+}

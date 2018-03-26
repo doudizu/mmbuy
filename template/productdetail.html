@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/productdetail.css">
+    <link rel="icon" href="../favicon.ico">
+</head>
+
+<body>
+    <header id="header">
+        <a href="#" class="glyphicon glyphicon-arrow-left  btn-back"></a>
+        <h4 class="title">国内折扣</h4>
+        <a href="#" class="glyphicon glyphicon-download-alt btn-load">
+            <i>APP下载</i>
+        </a>
+    </header>
+    <main id="main">
+        <!-- 商品详情 -->
+        
+    </main>
+    <footer id="footer">
+        <div class="nav-menu">
+            <a href="index.html" class="index">首页</a>>
+            <a href="discount.html" class="discount">国内折扣</a>
+        </div>
+        <ul class="footer-nav row">
+            <li class="col-xs-4">
+                <a href="">登录</a>
+            </li>
+            <li class="col-xs-4">
+                <a href="">注册</a>
+            </li>
+            <li class="col-xs-4">
+                <a href="">
+                    <i class="glyphicon glyphicon-arrow-up"></i>返回顶部</a>
+            </li>
+        </ul>
+        <div class="footer-info">
+            <p>
+                <a href="#" class="load">手机APP下载</a>
+                <a href="#" class="mobile">慢慢买手机版</a>
+                -- 掌上比价平台
+            </p>
+            <p class="link">m.manmanbuy.com</p>
+        </div>
+    </footer>
+
+
+    <!-- 商品详情 -->
+    <script type="text/html" id="proDetailTemp">
+    {{each result}}    
+        <div class="product-detail">
+            <div class="product-title">
+                <h4>{{$value.productName}}</h4>
+            </div>
+            <p class="price">{{$value.productPrice}}</p>
+            <p class="info">
+                <span class="mall">{{$value.productFrom}}</span>
+                <span class="time">{{$value.productTime}}</span>
+                <span class="author">{{$value.productTips}}</span>
+            </p>
+            <div class="conn">
+                <ul class="media-list">
+                    <li class="media">
+                        <div class="pull-right">
+                            <a href="#">
+                                {{#$value.productImg}}
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            {{$value.productInfo}}
+                            <a href="">点击领取15元优惠券</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-buy">
+                <a href="" class="btn btn-warning" data-id="{{$value.productId}}">立即购买</a>
+            </div>
+            <div class="comment">
+                <div class="comment-title">发表评论</div>
+                <div class="comment-content">
+                    <textarea cols="30" rows="10"></textarea>
+                    <div>
+                        <button class="sub pull-right">发表评论</button>
+                    </div>
+                </div>
+                <div class="comment-new">最新评论</div>
+            </div>
+            <!-- <div class="product-tag">
+                标签:
+                <a href="">小猪佩奇书</a>
+                <a href="">绘本</a>
+                <a href="">童话</a>
+            </div> -->
+        </div>
+    {{/each}}
+    </script>
+
+
+
+    <script src="../lib/artTemplate/template.js"></script>
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <script src="../js/productdetail.js"></script>
+</body>
+
+</html>

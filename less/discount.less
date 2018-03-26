@@ -1,0 +1,160 @@
+// 导入公共样式
+@import './base.less';
+
+body,html {
+    width: 100%;
+    height: 100%;
+}
+
+#wrapper {
+    height: 100%;
+    .scroll{
+        min-height: 2920px;
+        #main {
+            
+            .product-list {
+                // 每个商品的容器
+                width: 100%;
+                margin: 0;
+                >li {
+                    box-sizing: border-box;
+                    padding: 0;
+                    line-height: 18px;
+                    height: 270px;
+                    overflow: hidden;
+                    border: 1px solid #ccc;
+                    a {
+                        display: block;
+                        background-color: #fff;
+                        width: 100%;
+                        height: 100%;
+                        .img {
+                            padding: 10px 0;
+                            text-align: center;
+                            >img {
+                                width: 140px;
+                                height: 140px;
+                            }
+                        }
+        
+                        .title {
+                            height: 36px;
+                            line-height: 18px;
+                            font-size: 18px;
+                            overflow: hidden;
+                            padding: 0px 8px;
+                            color: #333333;
+                            font-weight: bold;
+                        }
+        
+                        .subtit {
+                            padding: 6px 8px;
+                            color: #ff841d;
+                        }
+        
+                        .mall {
+                            padding: 6px 8px;
+                            color: #a1a1a1;
+                        }
+                    }
+                }   
+            }
+        }
+    }
+}
+
+#footer {
+    .nav-menu {
+        height: 30px;
+        line-height: 30px;
+        padding-left: 8px;
+        margin: 20px 0;
+        background-color: #ebebeb;
+        border-top: solid 1px #ebebeb;
+        border-bottom: 1px solid #ccc;
+        
+        >a {
+            color: #333333;
+        }
+    }
+}
+// 返回顶部
+.btn-up {
+    display: none;
+    color: #fff;
+    background-color: #ff841d;
+    padding: 10px;
+    font-size: 30px;
+    position: fixed;
+    top: 560px;
+    right: 20px;
+    border-radius: 50%;
+    &:before {
+        padding-right: 4px;
+    }
+}
+// 广告部分
+.ad-content {
+    width: 100%;
+    height: 100%;
+    padding: 300px 25%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255,.3);
+    .ads {
+       .btn-close {
+           position: absolute;
+           right: 8px;
+           top: 8px;
+           color: #fff;
+           font-size: 20px;
+       }
+       img {
+           width: 100%;
+       } 
+    }
+}
+
+
+// 加载数据动画样式
+.anmation {
+    width: 50px;
+    height: 30px;
+    padding: 20px 0;
+    margin: 0 auto;
+}
+#preloader_1{
+    position:relative;
+}
+#preloader_1 span{
+    display:block;
+    bottom:0px;
+    width: 9px;
+    height: 5px;
+    background:#9b59b6;
+    position:absolute;
+    animation: preloader_1 1.5s  infinite ease-in-out;
+}  
+#preloader_1 span:nth-child(2){
+    left:11px;
+    animation-delay: .2s;  
+}
+#preloader_1 span:nth-child(3){
+    left:22px;
+    animation-delay: .4s;
+}
+#preloader_1 span:nth-child(4){
+    left:33px;
+    animation-delay: .6s;
+}
+#preloader_1 span:nth-child(5){
+    left:44px;
+    animation-delay: .8s;
+}
+@keyframes preloader_1 {
+    0% {height:5px;transform:translateY(0px);background:#9b59b6;}
+    25% {height:30px;transform:translateY(15px);background:#3498db;}
+    50% {height:5px;transform:translateY(0px);background:#9b59b6;}
+    100% {height:5px;transform:translateY(0px);background:#9b59b6;}
+}

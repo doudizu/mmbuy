@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>国内折扣</title>
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/discount.css">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../lib/animate/animate.min.css">
+</head>
+
+<body>
+
+    <!-- 区域滚动的父容器 -->
+    <div id="wrapper">
+        <!-- 区域滚动的目标元素 -->
+        <div class="scroll">
+            <header id="header">
+                <a href="#" class="glyphicon glyphicon-arrow-left  btn-back"></a>
+                <h4 class="title">国内折扣</h4>
+                <a href="#" class="glyphicon glyphicon-download-alt btn-load">
+                    <i>APP下载</i>
+                </a>
+            </header>
+            <main id="main">
+                <ul class="product-list row">
+                    <!-- 每个商品的容器 -->
+                    <!-- <li class="col-xs-6">
+                        <a href="">
+                            <div class="img">
+                                <img src="http://wnzk-qiniu.zuyushop.com/r_img/img/20180324/19/4363e5020a2044ba871f305d78363949.jpg" alt="">
+                            </div>
+                            <div class="title">Pelikan 百利金 M205 礼盒装 钢笔白色 质感高级</div>
+                            <div class="subtit">456元含税包邮</div>
+                            <div class="mall">
+                                <span class="third-party">京东商城</span> |
+                                <sapn class="time">2017</sapn>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="col-xs-6">
+                        <a href="">
+                            <div class="img">
+                                <img src="http://wnzk-qiniu.zuyushop.com/r_img/img/20180324/19/4363e5020a2044ba871f305d78363949.jpg" alt="">
+                            </div>
+                            <div class="title">Pelikan 百利金 M205 礼盒装 钢笔白色 质感高级</div>
+                            <div class="subtit">456元含税包邮</div>
+                            <div class="mall">
+                                <span class="third-party">京东商城</span> |
+                                <sapn class="time">2017</sapn>
+                            </div>
+                        </a>
+                    </li> -->
+                </ul>
+            </main>
+            <footer id="footer">
+                <!-- 加载数据动画 -->
+                <div class="anmation">
+                    <div id="preloader_1">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="nav-menu">
+                    <a href="index.html" class="index">首页</a>>
+                    <a href="discount.html" class="discount">国内折扣</a>
+                </div>
+                <ul class="footer-nav row">
+                    <li class="col-xs-4">
+                        <a href="login.html">登录</a>
+                    </li>
+                    <li class="col-xs-4">
+                        <a href="register.html">注册</a>
+                    </li>
+                    <li class="col-xs-4">
+                        <a href="">
+                            <i class="glyphicon glyphicon-arrow-up"></i>返回顶部</a>
+                    </li>
+                </ul>
+                <div class="footer-info">
+                    <p>
+                        <a href="#" class="load">手机APP下载</a>
+                        <a href="#" class="mobile">慢慢买手机版</a>
+                        -- 掌上比价平台
+                    </p>
+                    <p class="link">m.manmanbuy.com</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- 返回顶部按钮 -->
+    <div class="glyphicon glyphicon-arrow-up btn-up"></div>
+    <!-- ads -->
+    <div class="ad-content">
+
+        <div class="animated bounceIn ads">
+            <span class="glyphicon glyphicon-remove-sign btn-close"></span>
+            <img src="../images/hg.png" class="img-ads" alt="">
+        </div>
+    </div>
+    <!-- 商品容器模板 -->
+    <script type="text/html" id="productTemp">
+        {{each result}}
+        <li class="col-xs-6">
+            <a href="productdetail.html?id={{$value.productId}}">
+                <div class="img">
+                    {{#$value.productImg}}
+                </div>
+                <div class="title">{{$value.productInfo}}</div>
+                <div class="subtit">{{$value.productPrice}}</div>
+                <div class="mall">
+                    <span class="productfrom">{{$value.productFrom}}</span> |
+                    <sapn class="time">{{$value.productTime}}</sapn>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+
+    <script src="../lib/iscroll.js/iscroll.js"></script>
+    <script src="../lib/artTemplate/template.js"></script>
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <script src="../js/discount.js"></script>
+</body>
+
+</html>
